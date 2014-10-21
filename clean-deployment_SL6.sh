@@ -24,7 +24,9 @@ adduser -r storm
 yum install -y --enablerepo=centosplus emi-storm-backend-mp emi-storm-frontend-mp emi-storm-globus-gridftp-mp emi-storm-gridhttps-mp
 
 # avoid ntp check
-echo "config_ntp () {"> /opt/glite/yaim/functions/local/config_ntp\necho "return 0">> /opt/glite/yaim/functions/local/config_ntp\necho "}">> /opt/glite/yaim/functions/local/config_ntp
+echo "config_ntp () {"> /opt/glite/yaim/functions/local/config_ntp
+echo "return 0">> /opt/glite/yaim/functions/local/config_ntp
+echo "}">> /opt/glite/yaim/functions/local/config_ntp
 
 # install yaim configuration
 sh ./install-yaim-configuration.sh
